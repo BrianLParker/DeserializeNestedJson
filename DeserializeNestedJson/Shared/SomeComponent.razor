@@ -1,0 +1,25 @@
+﻿@using DeserializeNestedJson.Models;
+
+<hr />
+Text 1 Options
+<hr />
+@foreach (KeyValuePair<string, string> option in FilterOptions.Text1!)
+{
+    <div>
+        Key: @option.Key, Value: @option.Value
+    </div>
+}
+<hr />
+Text 2 Options
+<hr />
+@foreach (KeyValuePair<string, int> option in FilterOptions.Text2!)
+{
+    <div>
+        Key: @option.Key, Value: @option.Value
+    </div>
+}
+
+@code {
+    [Inject]
+    private Model FilterOptions { get; set; } = default!;
+}
