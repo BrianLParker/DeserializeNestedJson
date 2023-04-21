@@ -1,0 +1,15 @@
+﻿@page "/"
+@using DeserializeNestedJson.Models;
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+@FilterOptions.Text1["a"]
+@code {
+    [Inject]
+    private Model FilterOptions { get; set; }
+}
