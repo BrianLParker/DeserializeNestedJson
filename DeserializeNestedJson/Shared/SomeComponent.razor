@@ -1,20 +1,23 @@
 ﻿@using DeserializeNestedJson.Models;
 @inject Model FilterOptions
-<hr />
-Text 1 Options
-<hr />
-@foreach (KeyValuePair<string, string> option in FilterOptions.Text1!)
-{
-    <div>
-        Key: @option.Key, Value: @option.Value
-    </div>
-}
-<hr />
-Text 2 Options
-<hr />
-@foreach (KeyValuePair<string, int> option in FilterOptions.Text2!)
-{
-    <div>
-        Key: @option.Key, Value: @option.Value
-    </div>
-}
+
+<details>
+    <summary>Model Data</summary>
+    Text 1 Options
+    <hr />
+    @foreach (KeyValuePair<string, string> option in FilterOptions.Text1!)
+    {
+        <div>
+            Key: @option.Key, Value: @option.Value
+        </div>
+    }
+    <hr />
+    Text 2 Options
+    <hr />
+    @foreach (KeyValuePair<string, int> option in FilterOptions.Text2!)
+    {
+        <div>
+            Key: @option.Key, Value: @option.Value
+        </div>
+    }
+</details>

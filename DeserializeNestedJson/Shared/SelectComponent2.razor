@@ -1,0 +1,14 @@
+﻿@using DeserializeNestedJson.Models;
+@inject Model FilterOptions
+<select class="form-control" @bind="@value">
+    <option>Select</option>
+    @foreach (var item in FilterOptions.Text2!)
+    {
+        <option value="@item.Value">@item.Key</option>
+    }
+</select>
+<div>Value: @value</div>
+
+@code {
+    int? value;
+}
