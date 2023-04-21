@@ -1,5 +1,5 @@
 ﻿@using DeserializeNestedJson.Models;
-
+@inject Model FilterOptions
 <hr />
 Text 1 Options
 <hr />
@@ -17,9 +17,4 @@ Text 2 Options
     <div>
         Key: @option.Key, Value: @option.Value
     </div>
-}
-
-@code {
-    [Inject]
-    private Model FilterOptions { get; set; } = default!;
 }
